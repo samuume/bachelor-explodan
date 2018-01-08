@@ -1,0 +1,97 @@
+@import 'variables';
+@import 'mixins';
+
+.about-wrapper {
+  width: 100%;
+  margin-top: -70px;
+  .return-top {
+    background-color: $text-p;
+    border-radius: 50%;
+    bottom: 50px;
+    color: #fff !important;
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    outline: 0;
+    position: fixed;
+    right: 50px;
+    text-align: center;
+    width: 50px;
+    z-index: 99;
+    &:hover {
+      background-color: #000;
+    }
+  }
+  .top-wrapper-content {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://s3.eu-central-1.amazonaws.com/elasticbeanstalk-eu-central-1-250224882508/bg/about_bg.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .overlay-white {
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+    .overlay-dark {
+      background-color: $hover-overlay;
+    }
+    .first-container, .second-container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      button {
+        background: none;
+        border: none;
+        margin-top: 60px;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .second-content {
+      color: #fff;
+    }
+  }
+  .bottom-wrapper-content {
+    height: 100vh;
+    .third-content {
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      .third-content-left {
+        text-align: center;
+        padding: 0 30px;
+      }
+      .third-content-right {
+        text-align: right;
+        padding: 0 30px;
+      }
+      .quote {
+        font-family: 'Crimson Text', serif;
+        font-size: 40px;
+        font-style: italic;
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .first-container, .second-container, .bottom-wrapper-content  {
+    height: auto !important;
+  }
+  .first-content, .second-content, .third-content {
+    padding: 20px; 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top-wrapper-content {
+    padding-top: 100px;
+  }
+}

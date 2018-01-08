@@ -1,0 +1,35 @@
+@import 'variables';
+/*
+** Footer
+*/
+footer {
+  background-color: $text-p;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 60px 0;
+  width: 100%;
+  .footer-content {
+    .logo-text {
+      color: $orange !important;
+    }
+    .footer-info {
+      margin-bottom: 60px;
+      p {
+        margin-top: 30px;
+        padding-right: 50px;
+      }
+      ul {
+        margin-top: 30px;
+        list-style: none;
+        li {
+          margin: 10px 0;
+          .socialmedia-logos {
+            width: 30px;
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+}

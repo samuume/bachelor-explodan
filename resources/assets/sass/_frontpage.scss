@@ -1,0 +1,223 @@
+@import 'variables';
+@import 'mixins';
+/*
+** Search
+*/
+.frontpageSearch {
+  position: relative;
+  z-index: 1;
+  .hero-container {
+    padding-top: 120px;
+    h1 {
+      span {
+        display: block;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .search-box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .search-field {
+      height: 40px;
+      border: 1px solid $gray-p;
+      border-radius: 3px;
+      padding: 25px 20px;
+      font-size: 18px;
+      margin: 0 15px 15px 0;
+      outline: none;
+      transition: all 0.3s ease;
+      &:focus {
+        border: 1px solid $orange;
+        transition: all 0.3s ease;
+      }
+    }
+    .advance-search {
+      height: 52px;
+      padding: 15px;
+      border: 1px $orange solid;
+      color: $orange !important;
+      &:hover {
+        color: #fff !important;
+        background-color: $orange;
+      }
+    }
+  }
+  .result-panel {
+    padding: 15px;
+    position: absolute;
+    z-index: 99;
+    background-color: #fff;
+    .flex-column {
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $gray-p;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      .ais-highlight {
+        color: $orange;
+        em {
+          background: $orange;
+          color: white;
+        }
+      }
+      img {
+        width: auto;
+        height: 200px;
+      }
+    }
+  }
+}
+/*
+** Featured
+*/
+.featured-posts {
+  box-shadow: $boxshadow;
+  .featured-item-box {
+    height: 400px;
+    background-position: center center;
+    background-size: cover;
+    color: #fff !important;
+    padding: 0 !important;
+    text-align: center;
+    .overlay {
+      height: 100%;
+      background-color: $normal-overlay;
+      transition: all 0.5s ease;
+      position: relative;
+      &:hover {
+        background-color: $hover-overlay;
+        transition: all 0.5s ease;
+      }
+      .align-box {
+        position: absolute;
+        bottom: 30px;
+        padding: 0 30px;
+        width: 100%;
+      }
+    }
+    h3 {
+      margin-top: 0 !important;
+    }
+    .hover-text {
+      display: none;
+      height: 0px;
+      transition: all 1s ease;
+      span {
+        display: block;
+        color: $orange !important;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    &:hover .hover-text {
+      display: block;
+      height: auto;
+      transition: all 1s ease;
+    }
+  }
+}
+/*
+** About
+*/
+.about-frontpage {
+  .about-item-box {
+    text-align: center;
+    padding: 0 15px;
+    img {
+      height: 90px;
+      margin-bottom: 15px;
+    }
+    h2 {
+      margin-bottom: 0 !important;
+    }
+    hr {
+      background-color: $orange;
+      width: 70px;
+      height: 2px;
+    }
+  }
+}
+/*
+** Instagram Section
+*/
+.instagram-row {
+  margin-left: -15px;
+  margin-right: -15px;
+  .item-box {
+    margin-bottom: 30px;
+    transition: all 1s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+    .insta-inner-box {
+      width: 100%;
+      box-shadow: $boxshadow;
+      .insta-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+      .text-content {
+        height: 150px;
+        padding: 0 15px;
+        .gray-text {
+          margin: 15px 0;
+        }
+      }
+    }
+  }
+}
+/*
+** Co-create
+*/
+.create-frontpage {
+  width: 100%;
+  height: 600px;
+  background-image: url('https://s3.eu-central-1.amazonaws.com/elasticbeanstalk-eu-central-1-250224882508/bg/co-create-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  .create-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $hover-overlay;
+    .create-content {
+      height: 400px;
+      border: 6px solid #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .h1 {
+        line-height: normal !important;
+        margin-bottom: 10px !important;
+      }
+      a {
+        background-color: $orange;
+        padding: 10px 20px;
+        transition: all 1s ease;
+        &:hover {
+          background-color: darken($orange, 5%);
+          transition: all 1s ease;
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 768px) {
+  .create-frontpage {
+    .create-content {
+      border: none !important;
+    }
+  }
+  .hero-container {
+    padding-top: 30px !important;
+  }
+}

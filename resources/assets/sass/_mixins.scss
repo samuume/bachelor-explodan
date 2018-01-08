@@ -1,0 +1,41 @@
+@import 'variables';
+/*
+** Explodan Custom Mixins
+*/
+
+// Font
+@mixin content-text($size, $weight, $lh, $mb) {
+  font-size: $size !important;
+  font-weight: $weight !important;
+  line-height: $lh !important;
+  margin-bottom: $mb !important;
+}
+@mixin button-text($size, $weight, $lh, $cap) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lh;
+  text-transform: $cap;
+}
+
+.h1, h1 {
+  @include content-text(48px, 700, 55px, 30px);
+}
+.h2, h2 {
+  @include content-text(32px, 700, normal, 30px);
+}
+.h3, h3 {
+  @include content-text(24px, 700, normal, 15px);
+}
+.h4, h4 {
+  @include content-text(20px, 600, normal, auto);
+}
+.p, p {
+  @include content-text(18px, 500, 30px, auto);
+}
+.gray-text {
+  @include content-text(14px, 500, normal, auto);
+  color: $gray-p !important;
+}
+.cta-btn {
+  @include button-text(20px, 600, auto, uppercase);
+}

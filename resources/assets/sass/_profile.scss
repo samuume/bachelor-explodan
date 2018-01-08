@@ -1,0 +1,108 @@
+@import 'variables';
+
+/*
+** Profile Page Styles
+*/
+.profile-info {
+  margin-top: 60px;
+  .info-content {
+    .sendbtn {
+      background-color: $orange;
+      border-radius: 0;
+      transition: all 1s ease;
+      outline: none;
+      border: none;
+      margin-top: 0;
+      &:hover {
+        background-color: darken($orange, 5%);
+        transition: all 1s ease;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .profile-avatar-upload {
+    width: 100%;
+    margin: 30px 0;
+    #file-upload,
+    #img1-upload,
+    #img2-upload,
+    #img3-upload {
+      display: block;
+      opacity: 0;
+      cursor: pointer;
+    }
+    label {
+      padding: 0.5em;
+      display: inline-block;
+      background: $orange;
+      color: white;
+      cursor: pointer;
+      transition: all 1s ease;
+      width: 130px;
+      height: 40px;
+      text-align: center;
+      &:hover{
+        background: darken($orange , 5%);
+        transition: all 1s ease;
+      }
+    }
+    #filename,
+    #img1-filename,
+    #img2-filename,
+    #img3-filename {
+      padding: 0.5em;
+      float: left;
+      width: auto;
+      white-space: nowrap;
+      overflow: hidden;
+      background: darken(#F3F6F9 , 5%);
+      height: 40px;
+    }
+  }
+  .profile-share-form {
+    .panel {
+      width: 100%;
+      .form-group {
+        margin-bottom: 30px;
+      }
+      .form-control {
+        width: 100%;
+      }
+      .location-dropdown {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .dropdown-content {
+          width: 49%;
+          display: flex;
+          flex-direction: column;
+          select {
+            border: none;
+            border-bottom: 1px solid $orange;
+            background-color: transparent;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .share-info-content {
+    margin-top: 30px;
+    .share-btn-wrapper {
+      margin: 30px 0;
+      .share-btn {
+        background-color: $orange;
+        padding: 10px 20px;
+        transition: all 1s ease;
+        margin-top: 60px;
+        color: white !important;
+        &:hover {
+          background-color: darken($orange, 5%);
+          transition: all 1s ease;
+        }
+      }
+    }
+  }
+}

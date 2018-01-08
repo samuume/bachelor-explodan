@@ -1,0 +1,77 @@
+@import 'variables';
+
+.navbar-brand {
+  i {
+  color: $orange;
+  padding-right: .5em;
+  }
+}
+
+.dropdown-menu {
+  width: 50vw;
+  height: auto;
+  border: none;
+  box-shadow: $boxshadow;
+  .dropdown-menu-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2em;
+    li.menu-links {
+      display: flex;
+      flex-direction: column;
+      color: black;
+      text-decoration: none;
+      font-size: 20px;
+      ul.nav.navbar-nav {
+        display: flex;
+        flex-direction: column;
+      }
+      a {
+        text-decoration: none;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        padding-left: 14px;
+      }
+    }
+    .profile-preview {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      p {
+        margin-top: 1em;
+        font-size: 15px;
+      }
+    }
+  }
+}
+.mobile-menu-auth-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .profile-preview {
+    width: 50%;
+  }
+}
+
+.menu-links.animated.mobile-show.fadeInLeft, .profile-preview.mobile-show {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #app-navbar-collapse {
+    background: $orange;
+  }
+
+  .menu-links.animated.mobile-show.fadeInLeft, .profile-preview.mobile-show {
+    display: block;
+    color: white;
+  }
+  .navbar-nav  {
+    margin: 0;
+  }
+  .mobile-hide {
+    display: none !important;
+  }
+}

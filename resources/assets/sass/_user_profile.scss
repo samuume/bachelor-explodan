@@ -1,0 +1,10 @@
+@import 'variables';
+@import 'mixins';
+
+img.profile_user_avatar {
+  width: 35px;
+  border-radius: 150px;
+}
+.container.full-height {
+  min-height: 90vh;
+}

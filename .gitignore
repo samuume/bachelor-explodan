@@ -1,0 +1,12 @@
+/.env
+/node_modules
+/database/*.sqlite
+/.idea
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.env
+/vendor
+/app/Providers/AppServiceProvider.php
